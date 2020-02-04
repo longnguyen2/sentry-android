@@ -663,7 +663,7 @@ final class DefaultAndroidEventProcessor implements EventProcessor {
           return file;
         }
         // if we are looking to the same directory, let's check the next one or no external storage
-        if (file.getAbsolutePath().contains(internalStoragePath)) {
+        if (file == null || file.getAbsolutePath().contains(internalStoragePath)) {
           continue;
         }
         return file;
